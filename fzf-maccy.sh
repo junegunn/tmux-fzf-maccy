@@ -5,7 +5,7 @@ set -eu -o pipefail
 DB=~/Library/Containers/org.p0deje.Maccy/Data/Library/Application\ Support/Maccy/Storage.sqlite
 SQL="select   distinct ZVALUE
      from     ZHISTORYITEMCONTENT
-     where    ZTYPE like '%text%'
+     where    ZTYPE IN ('public.text','public.utf8-plain-text')
      order by Z_PK desc"
 
 if ! [ -r "$DB" ]; then
