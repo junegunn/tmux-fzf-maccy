@@ -12,7 +12,6 @@ Prerequisites
 -------------
 
 - [tmux][tmux]
-    - Popup window is used if you have tmux 3.2 or above
 - [fzf][fzf]
 - [Maccy][maccy]
 
