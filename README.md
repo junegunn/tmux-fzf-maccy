@@ -14,7 +14,6 @@ Prerequisites
 - [tmux][tmux]
     - Popup window is used if you have tmux 3.2 or above
 - [fzf][fzf]
-    - `fzf-tmux` should be on `$PATH`
 - [Maccy][maccy]
 
 Installation
@@ -40,9 +39,8 @@ Customization
 # Bind-key (default: '@')
 set -g @fzf-maccy-bind '@'
 
-# fzf-tmux layout (default: '-p70%' on tmux 3.2, '-d' otherwise)
-#   (-p requires tmux 3.2 or above, see `man fzf-tmux` for available options)
-set -g @fzf-maccy-layout '-p70%'
+# Popup window orientation and size (default: '70%', uses '--tmux' option of fzf)
+set -g @fzf-maccy-popup '70%'
 ```
 
 License
