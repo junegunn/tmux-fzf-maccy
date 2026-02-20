@@ -22,6 +22,6 @@ SEP=$(head -128 /dev/urandom | shasum)
 SEP=${SEP::8}
 sqlite3 -newline "$SEP" "$DB" "$SQL" |
   perl -pe "s/$SEP/\\x0/g" |
-  fzf --tmux "$@" --gap 1 --highlight-line --read0 --layout=reverse --multi --prompt='Maccy> ' --tiebreak=index |
+  fzf --tmux "$@" --gap 1 --highlight-line --read0 --style=full --layout=reverse --multi --prompt='Maccy> ' --tiebreak=index --wrap=word |
   perl -pe 'chomp if eof' |
   pbcopy
